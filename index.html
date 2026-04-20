@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 2 | Aristóteles e o Justo Meio</title>
+    <title>Sobre o Curso | Ética Aristotélica no Cotidiano Digital</title>
     <style>
         * {
             margin: 0;
@@ -20,7 +20,6 @@
             --text-primary: #ffffff;
             --text-secondary: #9aa7b9;
             --border: #1e2a44;
-            --success: #2ecc71;
         }
 
         body {
@@ -33,15 +32,12 @@
         .navbar {
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            padding: 16px 24px;
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 16px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,8 +54,7 @@
 
         .nav-links {
             display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
+            gap: 16px;
         }
 
         .nav-links a {
@@ -71,175 +66,121 @@
 
         .nav-links a:hover {
             color: var(--gold);
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .module-nav {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-
-        .module-btn {
-            background: var(--bg-light);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            padding: 10px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .module-btn.active {
-            background: var(--gold);
-            color: var(--bg-dark);
-            border-color: var(--gold);
-        }
-
-        .module-btn:hover {
-            background: var(--gold-dark);
-            color: var(--bg-dark);
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 32px 24px;
-            min-height: calc(100vh - 160px);
+            padding: 48px 24px;
         }
 
-        .content-section {
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .hero-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-card {
             background: var(--bg-card);
             border-radius: 20px;
             padding: 28px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             border: 1px solid var(--border);
             transition: transform 0.2s;
         }
 
-        .content-section:hover {
+        .section-card:hover {
             transform: translateY(-2px);
             border-color: var(--gold);
         }
 
-        .content-section h2 {
+        .section-card h2 {
             color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            border-left: 3px solid var(--gold);
-            padding-left: 16px;
-        }
-
-        .content-section h3 {
-            color: var(--gold);
-            margin: 20px 0 12px 0;
-            font-size: 1.2rem;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 16px;
-            margin: 24px 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-        }
-
-        .quote-block {
-            background: rgba(212,175,55,0.08);
-            border-left: 4px solid var(--gold);
-            padding: 20px 24px;
-            margin: 20px 0;
-            font-style: italic;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .quote-author {
-            margin-top: 12px;
-            color: var(--gold);
-            font-style: normal;
-            font-weight: 500;
-        }
-
-        .info-box, .info-box-green {
-            border-radius: 16px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .info-box {
-            background: rgba(212,175,55,0.05);
-            border: 1px solid var(--gold);
-        }
-
-        .info-box-green {
-            background: rgba(46, 204, 113, 0.08);
-            border: 1px solid var(--success);
-        }
-
-        .virtue-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .virtue-table th, .virtue-table td {
-            border: 1px solid var(--border);
-            padding: 12px;
-            text-align: left;
-        }
-
-        .virtue-table th {
-            background: var(--gold-dark);
-            color: var(--bg-dark);
-        }
-
-        .btn-mark-read {
-            background: var(--gold);
-            color: var(--bg-dark);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 40px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 16px;
-            transition: all 0.2s;
-            display: inline-flex;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+            display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
         }
 
-        .btn-mark-read:hover:not(.completed) {
-            background: #e6c453;
-            transform: scale(0.98);
+        .section-card ul, .section-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
 
-        .btn-mark-read.completed {
-            background: var(--success);
-            color: var(--bg-dark);
-            opacity: 0.8;
-            cursor: default;
+        .section-card ul {
+            margin-left: 24px;
         }
 
-        .progress-videos {
+        .section-card li {
+            margin: 8px 0;
+        }
+
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .structure-item {
             background: var(--bg-light);
             border-radius: 16px;
             padding: 16px;
-            margin-top: 24px;
             text-align: center;
+        }
+
+        .structure-item .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .structure-item h3 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .structure-item p {
+            font-size: 0.8rem;
+        }
+
+        .btn-start {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 32px auto 0;
+            padding: 16px 32px;
+            background: var(--gold);
+            color: var(--bg-dark);
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 60px;
+            transition: all 0.2s;
+        }
+
+        .btn-start:hover {
+            background: #e6c453;
+            transform: scale(1.02);
         }
 
         .footer {
@@ -251,63 +192,18 @@
             font-size: 0.85rem;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            color: var(--gold);
-        }
-
-        .subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 32px;
-            gap: 16px;
-        }
-
-        .nav-btn {
-            background: var(--gold-dark);
-            color: var(--bg-dark);
-            padding: 12px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .nav-btn:hover {
-            background: var(--gold);
-            transform: scale(1.02);
-        }
-
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                text-align: center;
+            .container {
+                padding: 32px 20px;
             }
-            .nav-links {
-                justify-content: center;
-            }
-            .module-nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            .virtue-table {
-                font-size: 0.7rem;
-            }
-            .content-section {
-                padding: 20px;
-            }
-            h1 {
+            .hero h1 {
                 font-size: 1.6rem;
             }
-            .nav-buttons {
-                flex-direction: column;
+            .section-card h2 {
+                font-size: 1.2rem;
+            }
+            .structure-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -315,162 +211,122 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="https://lrpluciano-pereira.github.io/index/" class="logo">
+            <a href="https://lrpluciano-pereira.github.io/sobre.html" class="logo">
                 <span>⚖️ Ética Digital</span>
             </a>
             <div class="nav-links">
-                <a href="https://lrpluciano-pereira.github.io/index/">🏠 Início</a>
-                <a href="https://lrpluciano-pereira.github.io/teoricomodulo1/">📚 Módulo 1</a>
-                <a href="https://lrpluciano-pereira.github.io/teoricomodulo2/" class="active">📖 Módulo 2</a>
-                <a href="https://lrpluciano-pereira.github.io/teoricomodulo3/">🍃 Módulo 3</a>
-                <a href="https://lrpluciano-pereira.github.io/simulador/">🎮 Simulador</a>
-                <a href="https://lrpluciano-pereira.github.io/forum/">💬 Atividades</a>
+                <a href="https://lrpluciano-pereira.github.io/login.html">Sair</a>
             </div>
         </div>
     </nav>
 
     <main class="container">
-        <h1>📖 Módulo 2: Aristóteles e o Justo Meio</h1>
-        <p class="subtitle">A virtude como equilíbrio entre excesso e falta</p>
-
-        <div class="module-nav">
-            <a href="https://lrpluciano-pereira.github.io/teoricomodulo1/" class="module-btn">📚 Módulo 1</a>
-            <a href="https://lrpluciano-pereira.github.io/teoricomodulo2/" class="module-btn active">📖 Módulo 2</a>
-            <a href="https://lrpluciano-pereira.github.io/teoricomodulo3/" class="module-btn">🍃 Módulo 3</a>
+        <div class="hero">
+            <div class="hero-icon">📚</div>
+            <h1>A Ética Aristotélica no Cotidiano Digital</h1>
+            <p>Uma jornada para compreender o equilíbrio entre excesso e falta no uso das tecnologias digitais</p>
         </div>
 
-        <!-- VÍDEO PRINCIPAL -->
-        <div class="content-section">
-            <h2>🎬 Vídeo Principal: Ética e Virtude</h2>
-            <div class="video-container">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/g87MnKQk5j4?si=hMzpvxwnQMMXC3hs" 
-                    title="Clóvis de Barros Filho - Ética e Virtude" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+        <div class="section-card">
+            <h2>📖 Apresentação</h2>
+            <p>Este curso online tem como objetivo promover a articulação entre a teoria filosófica e situações práticas do cotidiano digital, com base no conceito de <strong>"Justo Meio" (Mesotes)</strong> de Aristóteles.</p>
+            <p style="margin-top: 12px;">O problema pedagógico identificado é a dificuldade dos alunos em aplicar conceitos da filosofia clássica na tomada de decisões concretas do cotidiano digital. Através de um simulador interativo, o aluno atua como agente em situações que exigem decisão, tornando a aprendizagem mais significativa.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>🎯 Objetivos do Curso</h2>
+            <ul>
+                <li><strong>Compreender</strong> o conceito de "Justo Meio" (Mesotes) de Aristóteles como equilíbrio entre excesso e falta.</li>
+                <li><strong>Analisar criticamente</strong> o impacto da virtualização das relações na vida cotidiana.</li>
+                <li><strong>Desenvolver</strong> a autonomia ética para o uso equilibrado das tecnologias digitais.</li>
+                <li><strong>Aplicar</strong> os conceitos filosóficos em dilemas reais do ambiente digital.</li>
+                <li><strong>Refletir</strong> sobre as consequências das escolhas digitais no florescimento humano (Eudaimonia).</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>👥 Público-alvo</h2>
+            <p>Alunos do <strong>Ensino Médio e Ensino Técnico</strong>, com idade entre 15 e 18 anos, que já possuem familiaridade com redes sociais e noções básicas de ética.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>📚 Estrutura do Curso</h2>
+            <div class="structure-grid">
+                <div class="structure-item">
+                    <div class="icon">🏛️</div>
+                    <h3>Módulo 1</h3>
+                    <p>Fundamentos da Ética Antiga (Sócrates, Platão)</p>
+                </div>
+                <div class="structure-item">
+                    <div class="icon">📖</div>
+                    <h3>Módulo 2</h3>
+                    <p>Aristóteles e o Justo Meio</p>
+                </div>
+                <div class="structure-item">
+                    <div class="icon">🍃</div>
+                    <h3>Módulo 3</h3>
+                    <p>Outras Perspectivas (Epicuro, Hobbes, Rousseau)</p>
+                </div>
+                <div class="structure-item">
+                    <div class="icon">🎮</div>
+                    <h3>Simulador</h3>
+                    <p>6 dilemas do cotidiano digital</p>
+                </div>
+                <div class="structure-item">
+                    <div class="icon">💬</div>
+                    <h3>Atividades</h3>
+                    <p>4 questões reflexivas + Fórum</p>
+                </div>
+                <div class="structure-item">
+                    <div class="icon">🎓</div>
+                    <h3>Certificado</h3>
+                    <p>Ao concluir 100% do curso</p>
+                </div>
             </div>
-            <p><strong>Sinopse:</strong> Nesta aula, o Prof. Clóvis de Barros Filho introduz os conceitos fundamentais da ética aristotélica: eudaimonia (felicidade/florescimento humano), virtude (areté) e a importância do caráter para uma vida que vale a pena ser vivida.</p>
-            <button class="btn-mark-read" id="btnVideoMod2" onclick="marcarAssistido('video2')">📌 Marcar como assistido</button>
+            <p style="margin-top: 20px; text-align: center;"><strong>Carga horária total:</strong> 5 horas</p>
         </div>
 
-        <!-- ARISTÓTELES -->
-        <div class="content-section">
-            <h2>📖 Aristóteles (384-322 a.C.)</h2>
-            <p>Discípulo de Platão e tutor de Alexandre o Grande, Aristóteles fundou o Liceu em Atenas e escreveu sobre praticamente todas as áreas do conhecimento. Sua <strong>Ética a Nicômaco</strong> é uma das obras mais influentes da filosofia ocidental.</p>
-            
-            <div class="quote-block">
-                <p>"Toda arte, toda investigação, toda ação e toda escolha racional tendem para algum bem."</p>
-                <div class="quote-author">— Aristóteles, Ética a Nicômaco, Livro I</div>
-            </div>
-
-            <p>Para o Estagirita, a <strong>felicidade (Eudaimonía)</strong> é o bem supremo. A felicidade não é um estado subjetivo, mas uma <strong>atividade da alma conforme a virtude</strong>, realizada ao longo de toda a vida.</p>
+        <div class="section-card">
+            <h2>🧠 Metodologia</h2>
+            <p>O curso utiliza a <strong>Aprendizagem Ativa</strong>, combinando:</p>
+            <ul>
+                <li>🎬 <strong>Videoaulas</strong> com o Prof. Clóvis de Barros Filho</li>
+                <li>📖 <strong>Textos filosóficos</strong> com citações diretas das obras originais</li>
+                <li>🎮 <strong>Simulador interativo</strong> com feedback imediato baseado na ética aristotélica</li>
+                <li>💬 <strong>Fórum de discussão</strong> para troca de ideias e reflexão coletiva</li>
+                <li>🏆 <strong>Sistema de badges e gamificação</strong> para engajamento</li>
+                <li>📊 <strong>Gráfico de evolução</strong> para acompanhamento do progresso</li>
+            </ul>
         </div>
 
-        <!-- EUDAIMONIA -->
-        <div class="content-section">
-            <h2>🌟 Eudaimonia: O Florescimento Humano</h2>
-            <div class="quote-block">
-                <p>"A felicidade é uma atividade da alma conforme a virtude perfeita."</p>
-                <div class="quote-author">— Aristóteles, Ética a Nicômaco, Livro I</div>
-            </div>
-            <p>A Eudaimonia não é um prazer momentâneo, mas uma vida bem vivida, onde a pessoa realiza seu potencial humano plenamente. No contexto digital, pergunte-se: <em>meu uso da tecnologia está contribuindo para meu florescimento como ser humano?</em></p>
+        <div class="section-card">
+            <h2>👨‍🏫 Equipe</h2>
+            <ul>
+                <li><strong>Prof. Dr. Edson Pinheiro Pimentel</strong> - Orientador</li>
+                <li><strong>Luciano Rodrigues Pereira</strong> - Coordenador do Curso</li>
+                <li><strong>Marise da Silva</strong> - Tutora</li>
+            </ul>
         </div>
 
-        <!-- JUSTO MEIO -->
-        <div class="content-section">
-            <h2>⚖️ O Justo Meio (Mesotes)</h2>
-            <p>O vício é sempre <strong>excesso ou falta</strong> entre dois pontos extremos. A virtude é a <strong style="color:var(--gold)">medida entre os extremos</strong>, o equilíbrio, o justo meio.</p>
-            
-            <div class="quote-block">
-                <p>"A virtude é uma disposição de caráter relacionada com a escolha, consistindo num meio-termo relativo a nós, determinado pela razão."</p>
-                <div class="quote-author">— Aristóteles, Ética a Nicômaco, Livro II</div>
-            </div>
-
-            <table class="virtue-table">
-                <thead>
-                    <tr><th>Vício por Falta</th><th>Virtude (Justo Meio)</th><th>Vício por Excesso</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td style="color:#f28b82">Covardia</td><td style="color:var(--gold)">Coragem</td><td style="color:#fbbc04">Temeridade</td></tr>
-                    <tr><td style="color:#f28b82">Insensibilidade</td><td style="color:var(--gold)">Temperança</td><td style="color:#fbbc04">Libertinagem</td></tr>
-                    <tr><td style="color:#f28b82">Avareza</td><td style="color:var(--gold)">Liberalidade</td><td style="color:#fbbc04">Prodigalidade</td></tr>
-                </tbody>
-            </table>
+        <div class="section-card">
+            <h2>📜 Certificação</h2>
+            <p>Ao completar <strong>100% do curso</strong> (assistir aos 3 vídeos, realizar as 6 simulações, responder às 4 atividades e publicar 3 posts no fórum), você receberá um <strong>certificado de conclusão</strong> com carga horária de 5 horas, emitido pela Universidade Federal do ABC.</p>
         </div>
 
-        <!-- PHRONESIS -->
-        <div class="content-section">
-            <h2>🧠 Phronesis: A Sabedoria Prática</h2>
-            <p>Para Aristóteles, não basta saber teoricamente o que é o Justo Meio. É preciso desenvolver a <strong>Phronesis</strong> — a <strong style="color:var(--gold)">sabedoria prática ou prudência</strong> — que nos permite discernir, em cada situação concreta, qual é a ação correta.</p>
-            
-            <div class="quote-block">
-                <p>"Não é saber o que é a coragem que desejamos, mas ser corajoso, nem o que é a justiça, mas ser justos."</p>
-                <div class="quote-author">— Aristóteles, Ética a Nicômaco</div>
-            </div>
-
-            <p>A Phronesis é desenvolvida com a <strong>experiência, a reflexão e o hábito</strong>. No ambiente digital, isso significa aprender com os erros, refletir sobre as consequências das nossas ações online e ajustar nosso comportamento progressivamente.</p>
-        </div>
-
-        <!-- APLICAÇÃO DIGITAL -->
-        <div class="content-section">
-            <h2>📱 Aplicação no Cotidiano Digital</h2>
-            <div class="info-box-green">
-                <h3>💡 Como encontrar o Justo Meio digital?</h3>
-                <table class="virtue-table">
-                    <thead><tr><th>Falta</th><th>Justo Meio</th><th>Excesso</th></tr></thead>
-                    <tbody>
-                        <tr><td style="color:#f28b82">Isolamento digital</td><td style="color:var(--gold)">Uso equilibrado</td><td style="color:#fbbc04">Hiperconectividade</td></tr>
-                        <tr><td style="color:#f28b82">Ignorar notificações</td><td style="color:var(--gold)">Responder no momento certo</td><td style="color:#fbbc04">Responder sempre instantaneamente</td></tr>
-                        <tr><td style="color:#f28b82">Não compartilhar nada</td><td style="color:var(--gold)">Compartilhar com moderação</td><td style="color:#fbbc04">Exposição excessiva</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Navegação entre módulos -->
-        <div class="nav-buttons">
-            <a href="https://lrpluciano-pereira.github.io/teoricomodulo1/" class="nav-btn">← Módulo Anterior</a>
-            <a href="https://lrpluciano-pereira.github.io/teoricomodulo3/" class="nav-btn">Próximo Módulo: Outras Perspectivas →</a>
-        </div>
+        <a href="https://lrpluciano-pereira.github.io/index.html" class="btn-start">🚀 Iniciar Curso</a>
     </main>
 
     <footer class="footer">
-        <p>Universidade Federal do ABC | Licença Creative Commons BY-NC-SA | Luciano Rodrigues Pereira</p>
+        <p>Universidade Federal do ABC | Especialização em Ciência e Tecnologia</p>
+        <p>Licença Creative Commons BY-NC-SA | Luciano Rodrigues Pereira</p>
     </footer>
 
     <script>
-        function marcarAssistido(videoId) {
-            let assistidos = JSON.parse(localStorage.getItem('videos_assistidos') || '[]');
-            
-            if (!assistidos.includes(videoId)) {
-                assistidos.push(videoId);
-                localStorage.setItem('videos_assistidos', JSON.stringify(assistidos));
-                
-                const btn = document.getElementById('btnVideoMod2');
-                if (btn) {
-                    btn.classList.add('completed');
-                    btn.innerHTML = '✅ Assistido';
-                }
-                alert('✓ Vídeo marcado como assistido! Progresso salvo.');
-            } else {
-                alert('Este vídeo já foi marcado anteriormente.');
-            }
+        // Verificar se o usuário está logado
+        const usuarioLogado = localStorage.getItem('usuario_logado');
+        if (!usuarioLogado) {
+            window.location.href = 'https://lrpluciano-pereira.github.io/login.html';
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            let assistidos = JSON.parse(localStorage.getItem('videos_assistidos') || '[]');
-            if (assistidos.includes('video2')) {
-                const btn = document.getElementById('btnVideoMod2');
-                if (btn) {
-                    btn.classList.add('completed');
-                    btn.innerHTML = '✅ Assistido';
-                }
-            }
-        });
     </script>
 </body>
 </html>
